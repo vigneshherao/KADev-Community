@@ -1,0 +1,20 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+	<title>New Project</title>
+	<defs>
+		<image  width="160" height="160" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAAXNSR0IB2cksfwAAASBQTFRFQYDKQYDLQIDLQIHLQIHMP4HMP4LMP4LNPoLNPoLOPoPOPYPOPYPPPYTPPITPPITQO4TQO4XROoXSOobSOYbTOYfTOYfUOIfUOIfVOIjVN4jVN4jWNojWNonWNonXNYnXNYrXNYrYNIrYNIrZNIvZM4vZM4vaM4zaMozaMozbMYzbMY3cMI3dMI7dMI7eL47eL4/eL4/fLo/fLo/gLpDgLZDgLZDhLJDhLJHhLJHiK5HiK5LjKpLjKpLkKpPkKZPkKZPlKZTlKJTlKJTmJ5TmJ5TnJ5XnJ5XoJpXoJpboJpbpJZbpJZfpJZfqJJfqJJfrJJjrI5jrI5jsIpjsIpnsIpntIZntIZruIJruIJrvIJvvH5vvH5vwH5zwHpzwHpzxofvEvwAAA3FJREFUeJzt1Ola01AQh/EBBUEWAS2LIKAolH3fkSqLIAK2gILgcv934UlSkjPpaZKef7p8mPcKfs/MPEMU1NTU1PzE66lbi1Nr6zOvNqf29vbnbh2qzmJdXd2qF349PT29Wn1uL4u98stkMv39/QNBg4NDr4OGVSMj1MxMLZ5JJ/mmDmbqDpt67UxDpaaRN16jTmQaU5tpTJ3RY+plJGaKG1PYNOY2Pj7+VkU1WV3cmEZ1kuqd18TExHsyjanbYkwZRhpgYzKZxsqbvD6oJicnKW51fWVMCS582DSmMZ8UmDSSY/Kamspms9PTVNULj1gdG5NmmmbNzFBlF57e6h5N2RLTLIusnlPk6hKMKdo0OzvnNO9GNVldKSlsmtNM8/MLCwuLxcjqORkuvNLVsTFx0+LS0tKy04qKqnjhJaayY/JNK3qrq6tr65TyhWMmh7S2HrSxsUFWzwlbXemYuMlpc3PLbZusnlMKqzOQHk2P7TgRcuHlTMsJVqebtrlpZ2c3iOxXl86YDKY9t49O+/uU6uqixrQVQdoNSMrklcvlPqnI6jnFXnj86vbKm4I+HxxQtS48bnW+KURSpoNDLbJ6TknHFLE6bjoMd3R0/MWNrJ5TxWMqXZ3BdFw0aZ2cktVzMpgSjKnE5I9JJ52cen31oqpeeNIxMZLqTPXNi7ALtzSFx8RNXufnF05U1QuPHdMZJ3mmi0stqtfquOmS9d0tn88XCgWyek5FU+yFG0zGMQWmgtaVE1VndcYxmUx5ZrrSur6+caJ6rc5gui6abm5+BJHVc0p64cYxxZpUP4vd3lJDjEkjKROLrJ5TuqYQ6fbO65cbWT2npBceJpUz3TGT6t6P6rW6MEkzPTw8/PYjq+eUwuqYiZGC/qgoldWhY+Kmv/+0qF6r4yRmYlEVVlf5mCKi2o0psYkD8Qu/jxiTlYkDrZ5TCqtLDKzX6hIDrZ5TCqtLDKzX6hIDrZ5TDaOGGFNE1IAmFtUbEJcA0QSIJkA0AaIJEE2AaAJEEyCaANEEiCZANAGiCRBNgGgCRBMgmgDRBIgmQDQBogkQTYBoAkQTIJoA0QSIJkA0AaIJEE2AaAJEEyCaANEEiCZANAGiCRBNgGgCRBMgmgDRBIgmQDQBogkQTYBoAkQTIJoA0QSIJkA0AaIJEE2AaAJEa3jgf6ucOcQEgDwbAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 41px;fill: #000000;font-weight: 700;font-family: "DejaVuSerif-Bold", "DejaVu Serif" } 
+		.t1 { font-size: 16px;fill: #ffffff;font-weight: 700;font-family: "DejaVuSansCondensed-Bold", "DejaVu Sans Condensed" } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<text id="KADev" style="transform: matrix(1,0,0,1,6,83)" >
+		<tspan x="0" y="0" class="t0">K</tspan><tspan  y="0" class="t0">A</tspan><tspan  y="0" class="t0">D</tspan><tspan  y="0" class="t0">e</tspan><tspan  y="0" class="t0">v</tspan><tspan  y="0" class="t0">
+</tspan>
+	</text>
+	<text id="Community" style="transform: matrix(1,0,0,1,34,100)" >
+		<tspan x="0" y="0" class="t1">C</tspan><tspan  y="0" class="t1">o</tspan><tspan  y="0" class="t1">m</tspan><tspan  y="0" class="t1">m</tspan><tspan  y="0" class="t1">u</tspan><tspan  y="0" class="t1">n</tspan><tspan  y="0" class="t1">i</tspan><tspan  y="0" class="t1">t</tspan><tspan  y="0" class="t1">y
+</tspan>
+	</text>
+</svg>
