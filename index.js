@@ -37,7 +37,6 @@ app.get("/",(req,res)=>{
             function(err, results) {
               if(err) throw err;
               res.render("home.ejs",{results})
-              console.log(results)
             }
           );
         
@@ -50,11 +49,19 @@ app.get("/post",(req,res)=>{
     res.render("post.ejs");
 })
 
+app.post("/posts", (req, res) => {
+    let { message: newMessage, tags: newTags } = req.body;
 
-app.post("/posts/:id",(req,res)=>{
-    let {id} = req.params;
-    let {message:NewMessage,tags:newTags} = req.body;
-    
-
-})
-
+    try {
+        connection.query(
+            `INSERT INTO post (message, tags) VALUES ('${newMessage}', '${newTags}')`,
+            function (err, results) {
+                if (err) throw err;
+                console.log(results); 
+                res.redirect("/");
+            }
+        );
+    } catch (error) {
+        console.log(error);
+    }
+});
