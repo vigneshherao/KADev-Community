@@ -17,7 +17,6 @@ const connection = mysql.createConnection({
 
 
 
-
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));
 app.use(express.static(path.join(__dirname,"public/css")));
@@ -124,13 +123,56 @@ app.get("/post/edit/:id",(req,res)=>{
 
 app.patch("/post/edit/:id",(req,res)=>{
     let {id} = req.params;
-    let {message:newMsg} = req.body;
+    let {message:newMsg,id:newId} = req.body;
     try {
         connection.query(
-            `UPDATE post SET message = '${newMsg}' WHERE id = '${id}' `,
+            `SELECT * FROM post WHERE id = '${id}' `,
             function(err, results) {
               if(err) throw err;
               let data = results[0];
+              if(newId == data.id){
+                try {
+                    connection.query(
+                        `UPDATE post SET message = '${newMsg}' WHERE id = '${id}' `,
+                        function(err, results) {
+                          if(err) throw err;
+                          let data = results[0];
+                          console.log("id is corrected");
+                          res.redirect("/");
+                        }
+                      );
+                    
+                } catch (error) {
+                    console.log(error);
+                }
+              }
+              else{
+                verify();
+              }
+            }
+          );
+        
+    } catch (error) {
+        console.log(error);
+    }
+
+})
+
+
+
+app.get("/kadev/login",(req,res)=>{
+    res.render("create.ejs");
+})  
+
+
+app.post("/kadev/create",(req,res)=>{
+    let {name:userName,email:userEmail,password:userPassword} = req.body;
+    try {
+        connection.query(
+            `INSERT INTO user (name,email,password) VALUES ('${userName}','${userEmail}','${userPassword}') `,
+            function(err, results) {
+              if(err) throw err;
+              console.log(userName);
               res.redirect("/");
             }
           );
