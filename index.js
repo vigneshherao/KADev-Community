@@ -3,7 +3,9 @@ const app = express();
 const port = 8080;
 const path = require("path");
 const mysql = require('mysql2');
+const methodOverride = require('method-override')
 
+app.use(methodOverride('_method'))
 
 // create the connection to database
 const connection = mysql.createConnection({
@@ -65,3 +67,75 @@ app.post("/posts", (req, res) => {
         console.log(error);
     }
 });
+
+
+app.get("/post/:id",(req,res)=>{
+    try {
+        connection.query(
+            "SELECT * FROM post",
+            function(err, results) {
+              if(err) throw err;
+              res.render("view.ejs",{results})
+            }
+          );
+        
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+
+
+app.delete("/post/:id",(req,res)=>{
+    let {id} = req.params;
+    try {
+        connection.query(
+            `DELETE FROM post WHERE id = '${id}' `,
+            function(err, results) {
+              if(err) throw err;
+              res.redirect("/");
+            }
+          );
+        
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+
+
+app.get("/post/edit/:id",(req,res)=>{
+    let {id} = req.params;
+    try {
+        connection.query(
+            `SELECT * FROM post WHERE id = '${id}' `,
+            function(err, results) {
+              if(err) throw err;
+              let data = results[0];
+              res.render("edit.ejs",{data})
+            }
+          );
+        
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+
+app.patch("/post/edit/:id",(req,res)=>{
+    let {id} = req.params;
+    let {message:newMsg} = req.body;
+    try {
+        connection.query(
+            `UPDATE post SET message = '${newMsg}' WHERE id = '${id}' `,
+            function(err, results) {
+              if(err) throw err;
+              let data = results[0];
+              res.redirect("/");
+            }
+          );
+        
+    } catch (error) {
+        console.log(error);
+    }
+})
